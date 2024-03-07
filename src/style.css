@@ -33,14 +33,14 @@ nav>button,
     font-size: 1.5rem;
     color: white;
     background-color: rgba(10, 10, 10, 0.8);
-    border: 2px solid white;
+    border: 2px solid rgb(192, 165, 137);;
     border-radius: 20px 5px 20px 5px;
     transition: all 0.2s;
 }
 
 nav>button:hover:not(.active),
 .homeButton:hover {
-    box-shadow: 0px 0px 10px 2px white;
+    box-shadow: 0px 0px 10px 2px rgb(192, 165, 137);
     cursor: pointer;
 }
 
@@ -52,6 +52,8 @@ nav>button.active {
 #content {
     background-origin: border-box;
 }
+
+/* HOME PAGE */
 
 .mainContainer {
     height: 100%;
@@ -91,7 +93,7 @@ nav>button.active {
     font-size: 2rem;
     background-color: rgba(40, 40, 40, 0.8);
     border-style: double;
-    border: 5px double dimgray
+    border: 5px double rgb(192, 165, 137);
 }
 
 .homeButton:hover {
@@ -114,8 +116,35 @@ nav>button.active {
     font-size: 7rem;
 }
 
+/* END */
+
+/* MENU PAGE */
+
 .menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
 }
+
+.menu {
+    height: 100%;
+    width: 700px;
+    background-color: rgb(25, 30, 44);
+    border: 2px solid rgb(192, 165, 137);
+    padding: 10px;
+}
+
+.menuWrapper {
+    border: 2px solid rgb(192, 165, 137);
+    height: 100%;
+}
+
+/* END */
+
+/* ABOUT PAGE */
 
 .aboutContainer {
 }
+
+/* END */

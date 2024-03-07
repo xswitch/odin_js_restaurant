@@ -16,24 +16,23 @@ import './style.css';
     // Sets event listeners for all the buttons
     Object.entries(buttons).forEach(([buttonName, buttonElement]) => {
         buttonElement.addEventListener('click', ev => {
-            clickNavButton(buttonName, buttonElement)
+            if (activePage == buttonName) return;
+            changePage(buttonName)
         })
     })
 
-    // Toggles class change and active page change
-    function clickNavButton(buttonName, buttonElement) {
-        if (activePage == buttonName) return;
-        activePage = buttonName;
-        buttonElement.classList.toggle('active')
+    // Changes nav buttons class based on active page
+    function toggleNavClass() {
         for (const name in buttons) {
-            if (name != buttonName) buttons[name].classList.remove('active')
+            (name != activePage) ? buttons[name].classList.remove('active') : buttons[name].classList.add('active')
         }
-        changePage(activePage)
     }
 
     // Changes page based on property name in buttons object
     function changePage(page) {
-        document.querySelector('#content').lastChild.remove()
+        activePage = page;
+        const contentContainer = document.querySelector('#content')
+        if (contentContainer.lastChild) contentContainer.lastChild.remove()
         switch (page) {
             case 'home':
                 createHome();
@@ -47,7 +46,7 @@ import './style.css';
             default:
                 break;
         }
+        toggleNavClass()
     }
-
-    createHome()
+    changePage('menu')
 })()
