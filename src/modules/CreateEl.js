@@ -24,6 +24,11 @@ class El {
             if (option == 'properties') {
                 this.properties = value;
             }
+
+            // ID
+            if (option == 'id') {
+                this.id = value;
+            }
         }
     }
 
@@ -70,6 +75,7 @@ class El {
         return this._text;
     }
 
+    // Loops over properties in object
     set properties(props) {
         this._properties = props;
         Object.entries(this._properties).forEach(([property, propValue]) => {
@@ -79,6 +85,15 @@ class El {
 
     get properties() {
         return this._properties;
+    }
+
+    set id(value) {
+        this._id = value;
+        this.element.id = this._id;
+    }
+
+    get id() {
+        return this._id;
     }
 
 }
