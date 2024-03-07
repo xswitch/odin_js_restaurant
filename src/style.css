@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    background-color: dimgray;
+    display: grid;
+    grid-template-rows: 75px 1fr;
+}
+
+header {
+    background-color: lightblue;
+}
