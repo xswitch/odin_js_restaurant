@@ -60,7 +60,8 @@ nav>button.active {
 .homeContainer {
     min-width: 950px;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 20px;
     justify-items: center;
     align-items: center;
 }
@@ -80,6 +81,7 @@ nav>button.active {
     grid-row-start: 3;
     display: flex;
     gap: 2rem;
+    align-self: baseline;
 }
 
 .homeButton {

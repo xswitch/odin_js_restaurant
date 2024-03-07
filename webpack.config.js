@@ -8,6 +8,7 @@ module.exports = {
         template: './src/index.html',
         filename: 'index.html',
         inject: 'head',
+        favicon: './src/img/logo.png',
     })
     ],
     output: {
