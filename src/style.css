@@ -63,7 +63,7 @@ nav>button.active {
 .homeContainer {
     min-width: 950px;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr;
     gap: 20px;
     justify-items: center;
     align-items: center;
@@ -85,20 +85,21 @@ nav>button.active {
     display: flex;
     gap: 2rem;
     align-self: baseline;
+    padding: 5px;
 }
 
 .homeButton {
-    border-radius: 10px;
-    width: 200px;
-    height: 75px;
-    font-size: 2rem;
+    border-radius: 0;
+    padding: 10px;
+    width: fit-content;
+    font-size: 1.5rem;
     background-color: rgba(40, 40, 40, 0.8);
-    border-style: double;
-    border: 5px double rgb(192, 165, 137);
+    border: 2px solid rgb(192, 165, 137);
+    color:rgb(208, 220, 221);
+    
 }
 
 .homeButton:hover {
-    transform: scale(1.03);
 }
 
 .homeButton:active {

@@ -30,7 +30,7 @@ function createHome() {
         mediumText: new El('div', {
             parent: textContainer,
             classes: 'mediumText home',
-            text: 'Always Delivering'
+            text: 'Always Innovating'
         }),
         largeText: new El('div', {
             parent: textContainer,
@@ -43,13 +43,8 @@ function createHome() {
         bookButton: new El('button', {
             classes: 'homeButton bookButton',
             parent: buttonContainer,
-            text: 'Booking'
+            text: 'RESERVE TABLE'
         }),
-        takeAwayButton: new El('button', {
-            classes: 'homeButton takeawayButton',
-            parent: buttonContainer,
-            text: 'Takeaway'
-        })
     }
 }
 
