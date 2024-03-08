@@ -105,10 +105,10 @@ function createMenu() {
         ],
     }
 
-    function createMenuItem(item, parent) {
+    function createMenuItem(item, parent, extraClass = false) {
 
         const menuItemContainer = new El('div', {
-            classes: 'menuItem',
+            classes: `menuItem${(extraClass != false) ? (' ' + extraClass) : ''}`,
             parent,
         }).element
 
@@ -123,11 +123,6 @@ function createMenu() {
                 parent: menuItemContainer,
                 text: item.price,
             }),
-            description: new El('p', {
-                classes: 'menuItemDescription',
-                parent: menuItemContainer,
-                text: item.description,
-            }),
         }
         if (item.bottlePrice != false) {
             menuItem.bottlePrice = new El('h4', {
@@ -136,12 +131,20 @@ function createMenu() {
                 text: item.bottlePrice,
             })
         }
+
+        if (item.description != false) {
+            menuItem.description = new El('p', {
+                classes: 'menuItemDescription',
+                parent: menuItemContainer,
+                text: item.description,
+            })
+        }
     }
 
     function createAllItems(menuObj) {
         for (const section in menuObj) {
             menuObj[section].forEach(item => {
-                createMenuItem(item, containers[section + 'Section'].element)
+                createMenuItem(item, containers[section + 'Section'].element, section)
             })
         }
     }

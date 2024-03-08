@@ -153,6 +153,18 @@ nav>button.active {
     grid-row: span 3;
 }
 
+.menuSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menuItem {
+    display: grid;
+    grid-template-columns: 1fr 10px;
+    color: rgb(192, 165, 137);
+}
+
 /* END */
 
 /* ABOUT PAGE */
