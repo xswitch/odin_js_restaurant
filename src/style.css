@@ -138,6 +138,12 @@ nav>button.active {
 .menuWrapper {
     border: 2px solid rgb(192, 165, 137);
     height: 100%;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.entreesSection {
+    grid-row: span 3;
 }
 
 /* END */
