@@ -31,17 +31,17 @@ function createAbout() {
         background: new El('p', {
             classes: 'aboutBackground',
             parent: '.textWrapper',
-            text: `One of America's most beloved restaurants, Gramercy Tavern has welcomed guests to enjoy its contemporary American cuisine, warm hospitality, and unparalleled service in New York City for over two decades.`
+            text: `One of America's most beloved restaurants, The Restaurant has welcomed guests to enjoy its contemporary American cuisine, warm hospitality, and unparalleled service in New York City for over two decades.`
         }),
         background2: new El('p', {
             classes: 'aboutBackground',
             parent: '.textWrapper',
-            text: `Chef Michael Anthony's ever-evolving seasonal menu showcases the restaurant's relationships with local farms and purveyors.`
+            text: `Chef John Doe's ever-evolving seasonal menu showcases the restaurant's relationships with local farms and purveyors.`
         }),
         background3: new El('p', {
             classes: 'aboutBackground',
             parent: '.textWrapper',
-            text: 'Opened in 1994 by restaurateur Danny Meyer in a historic landmark building just north of Union Square, the restaurant has earned nine James Beard Awards, including "Outstanding Restaurant" and "Outstanding Chef in America.”'
+            text: 'Opened in 1994 by restaurateur Jane Doe in a historic landmark building just north of Union Square, the restaurant has earned nine James Beard Awards, including "Outstanding Restaurant" and "Outstanding Chef in America.”'
         })
     }
 }
