@@ -150,6 +150,10 @@ nav>button.active {
     gap: 25px;
 }
 
+.rightMenu {
+    gap: 50px;
+}
+
 .menuTitle {
     color: rgb(168, 180, 181);
     font-size: 1rem;
@@ -205,10 +209,6 @@ nav>button.active {
     justify-self: center;
 }
 
-.wine>.menuItemPrice {
-    padding-left: auto;
-}
-
 .wineSectionHeader {
     display: grid;
     grid-template-columns: 1fr 100px;
@@ -229,7 +229,7 @@ nav>button.active {
 }
 
 .gold {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: fantasy;
     color: rgb(192, 165, 137);
 }
