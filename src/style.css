@@ -140,6 +140,13 @@ nav>button.active {
     height: 100%;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    padding: 25px;
+    gap: 25px;
+}
+
+.menuTitle {
+    color: rgb(168, 180, 181);
+    font-size: 1rem;
 }
 
 .entreesSection {
