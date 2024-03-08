@@ -48,5 +48,5 @@ import './style.css';
         }
         toggleNavClass()
     }
-    changePage('menu')
+    changePage('about')
 })()

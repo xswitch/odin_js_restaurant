@@ -93,13 +93,10 @@ nav>button.active {
     padding: 10px;
     width: fit-content;
     font-size: 1.5rem;
-    background-color: rgba(40, 40, 40, 0.8);
+    background-color: rgba(50, 50, 50, 0.6);
     border: 2px solid rgb(192, 165, 137);
     color:rgb(208, 220, 221);
     
-}
-
-.homeButton:hover {
 }
 
 .homeButton:active {
@@ -240,6 +237,42 @@ nav>button.active {
 /* ABOUT PAGE */
 
 .aboutContainer {
+    display: grid;
+    place-items: center;
+}
+
+.about {
+    width: 700px;
+    background-color: rgb(15, 20, 34);
+    padding: 10px;
+    border: 2px solid rgb(192, 165, 137);
+}
+
+.aboutWrapper {
+    border: 2px solid rgb(192, 165, 137);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.aboutTitle {
+    color: rgb(168, 180, 181);
+    font-family: fantasy;
+    font-size: 2.5rem;
+    align-self: center;
+}
+
+.aboutBackground {
+    color: rgb(192, 165, 137);
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* END */
