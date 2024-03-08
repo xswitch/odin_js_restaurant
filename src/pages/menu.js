@@ -16,21 +16,37 @@ function createMenu() {
             classes: 'menuWrapper',
             parent: '.menu'
         }),
+        leftMenu: new El('div', {
+            classes: 'leftMenu',
+            parent: '.menuWrapper'
+        }),
+        rightMenu: new El('div', {
+            classes: 'rightMenu',
+            parent: '.menuWrapper'
+        }),
         entreesSection: new El('div', {
             classes: 'menuSection entreesSection',
-            parent: '.menuWrapper'
+            parent: '.leftMenu'
         }),
         sidesSection: new El('div', {
             classes: 'menuSection sidesSection',
-            parent: '.menuWrapper'
+            parent: '.rightMenu'
         }),
         dessertSection: new El('div', {
             classes: 'menuSection dessertSection',
-            parent: '.menuWrapper'
+            parent: '.rightMenu'
         }),
         wineSection: new El('div', {
             classes: 'menuSection wineSection',
-            parent: '.menuWrapper'
+            parent: '.rightMenu'
+        }),
+        wineSectionHeader: new El('div', {
+            classes: 'wineSectionHeader',
+            parent: '.wineSection',
+        }),
+        winePriceContainer: new El('div', {
+            classes: 'winePriceContainer',
+            parent: '.wineSectionHeader'
         })
 
     }
@@ -53,8 +69,18 @@ function createMenu() {
         }),
         wineTitle: new El('h3', {
             classes: 'menuTitle',
-            parent: containers.wineSection.element,
+            parent: containers.wineSectionHeader.element,
             text: 'WINES'
+        }),
+        glassPrice: new El('h4', {
+            classes: 'glassPrice gold',
+            parent: containers.winePriceContainer.element,
+            text: 'Glass'
+        }),
+        bottlePrice: new El('h4', {
+            classes: 'glassPrice gold',
+            parent: containers.winePriceContainer.element,
+            text: 'Bottle'
         })
     }
 
@@ -144,7 +170,7 @@ function createMenu() {
     function createAllItems(menuObj) {
         for (const section in menuObj) {
             menuObj[section].forEach(item => {
-                createMenuItem(item, containers[section + 'Section'].element, section)
+                createMenuItem(item, `.${section}Section`, section)
             })
         }
     }

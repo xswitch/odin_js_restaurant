@@ -11,8 +11,9 @@ body {
     display: grid;
     grid-template-rows: 75px 1fr;
     background-image: url("./img/bgimage.jpg");
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 header {
@@ -124,29 +125,35 @@ nav>button.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 0;
 }
 
 .menu {
-    height: 100%;
     width: 700px;
-    background-color: rgb(25, 30, 44);
+    background-color: rgb(15, 20, 34);
     border: 2px solid rgb(192, 165, 137);
     padding: 10px;
 }
 
 .menuWrapper {
     border: 2px solid rgb(192, 165, 137);
-    height: 100%;
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 25px;
+    gap: 25px;
+}
+
+.rightMenu,
+.leftMenu {
+    display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
 .menuTitle {
     color: rgb(168, 180, 181);
     font-size: 1rem;
+    font-family: fantasy;
 }
 
 .entreesSection {
@@ -156,12 +163,74 @@ nav>button.active {
 .menuSection {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .menuItem {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(192, 165, 137);
+}
+
+.menuItemTitle {
+    padding-right: 10px;
+    font-weight: 900;
+    font-family: fantasy;
+}
+
+.menuItemPrice {
+    font-style: italic;
+    font-family: fantasy;
+}
+
+.menuItemBottlePrice {
+    font-family: fantasy;
+    font-style: italic;
+}
+
+.menuItemDescription {
+    font-size: 1rem;
+    width: 100%;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+.menuItem.wine {
     display: grid;
-    grid-template-columns: 1fr 10px;
+    grid-template-columns: 1fr 50px 50px;
+}
+
+.menuItem.wine>.menuItemPrice,
+.menuItem.wine>.menuItemBottlePrice {
+    justify-self: center;
+}
+
+.wine>.menuItemPrice {
+    padding-left: auto;
+}
+
+.wineSectionHeader {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 1fr;
+}
+
+.wineSectionHeader>.menuTitle {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.winePriceContainer {
+    width: 100%;
+    grid-column-start: 2;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gold {
+    font-size: 0.9rem;
+    font-family: fantasy;
     color: rgb(192, 165, 137);
 }
 
